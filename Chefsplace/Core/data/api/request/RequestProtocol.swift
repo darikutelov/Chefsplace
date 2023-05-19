@@ -49,8 +49,9 @@ extension RequestProtocol {
     //  path: Represents the path component of the URL.
     //  query: Represents the query component of the URL (e.g., "key1=value1&key2=value2").
     //  fragment: Represents the fragment component of the URL (e.g., "section1").
-    components.scheme = "https"
+    components.scheme = "http"
     components.host = host
+    components.port = 8000
     components.path = path
 
     if !urlParams.isEmpty {
@@ -78,6 +79,7 @@ extension RequestProtocol {
       urlRequest.httpBody = try JSONSerialization.data(withJSONObject: params)
     }
 
+    print("👍", urlRequest)
     return urlRequest
   }
 }

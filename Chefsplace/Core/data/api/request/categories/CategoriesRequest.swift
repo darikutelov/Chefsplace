@@ -14,6 +14,13 @@ enum CategoriesRequest: RequestProtocol {
         "/api/v1/categories"
     }
     
+    var addAuthorizationToken: Bool {
+        switch self {
+        case .getAllCategories:
+            return false
+        }
+    }
+    
     var requestType: RequestType {
       .GET
     }

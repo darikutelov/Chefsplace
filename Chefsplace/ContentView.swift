@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    private let requestManager = RequestManager()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,6 +18,21 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .task {
+            await fetchCategories()
+        }
+    }
+    
+    private func fetchCategories() async {
+
+        do {
+            let categories: ProductCategoriesContainer = try await requestManager
+                .perform(CategoriesRequest.getAllCategories)
+            
+            print(categories)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
 

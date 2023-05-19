@@ -49,9 +49,3 @@ struct NutritionalValue: Identifiable, Codable {
     let text: String
 }
 
-struct ProductCategory: Identifiable, Codable {
-    let id: String
-    let name: String
-    let imageUrl: String
-    let position: Int
-}
