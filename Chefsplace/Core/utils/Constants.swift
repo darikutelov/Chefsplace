@@ -9,9 +9,8 @@ import Foundation
 
 enum Constants {
     enum General {}
-    
     enum Api {
-        public static let baseUrl = "https://cryptic-oasis-81288.herokuapp.com/api/v1/"
-        // public static let baseUrl = "http://localhost:8000/api/v1/"
+        public static let host = "https://dry-chamber-19090.herokuapp.com"
+        // public static let host = "http://localhost:8000"
     }
 }

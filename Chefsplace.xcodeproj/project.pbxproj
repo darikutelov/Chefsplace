@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C21E7F12A17A4F7005A8E57 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21E7F02A17A4F7005A8E57 /* DataParser.swift */; };
+		9C21E7F52A17A56F005A8E57 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21E7F42A17A56F005A8E57 /* RequestType.swift */; };
+		9C21E7F72A17A588005A8E57 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21E7F62A17A588005A8E57 /* RequestProtocol.swift */; };
+		9C21E7F92A17A6CC005A8E57 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21E7F82A17A6CC005A8E57 /* NetworkError.swift */; };
+		9C21E7FF2A17A760005A8E57 /* ProtocolRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21E7FE2A17A760005A8E57 /* ProtocolRequest.swift */; };
 		9C6FC5C82A175365000C2BBC /* ChefsplaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */; };
 		9C6FC5CA2A175365000C2BBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5C92A175365000C2BBC /* ContentView.swift */; };
 		9C6FC5CC2A175367000C2BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6FC5CB2A175367000C2BBC /* Assets.xcassets */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C21E7F02A17A4F7005A8E57 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
+		9C21E7F42A17A56F005A8E57 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		9C21E7F62A17A588005A8E57 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		9C21E7F82A17A6CC005A8E57 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		9C21E7FE2A17A760005A8E57 /* ProtocolRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolRequest.swift; sourceTree = "<group>"; };
 		9C6FC5C42A175365000C2BBC /* Chefsplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chefsplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefsplaceApp.swift; sourceTree = "<group>"; };
 		9C6FC5C92A175365000C2BBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +46,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C21E7EF2A17A4D0005A8E57 /* parser */ = {
+			isa = PBXGroup;
+			children = (
+				9C21E7F02A17A4F7005A8E57 /* DataParser.swift */,
+			);
+			path = parser;
+			sourceTree = "<group>";
+		};
+		9C21E7F22A17A529005A8E57 /* network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		9C21E7F32A17A546005A8E57 /* request */ = {
+			isa = PBXGroup;
+			children = (
+				9C21E7FD2A17A72F005A8E57 /* Categories */,
+				9C21E7FA2A17A708005A8E57 /* Product */,
+				9C21E7F42A17A56F005A8E57 /* RequestType.swift */,
+				9C21E7F62A17A588005A8E57 /* RequestProtocol.swift */,
+				9C21E7F82A17A6CC005A8E57 /* NetworkError.swift */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+		9C21E7FA2A17A708005A8E57 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		9C21E7FD2A17A72F005A8E57 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9C21E7FE2A17A760005A8E57 /* ProtocolRequest.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		9C6FC5BB2A175365000C2BBC = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +145,9 @@
 		9C6FC5D62A175B35000C2BBC /* data */ = {
 			isa = PBXGroup;
 			children = (
+				9C21E7F32A17A546005A8E57 /* request */,
+				9C21E7F22A17A529005A8E57 /* network */,
+				9C21E7EF2A17A4D0005A8E57 /* parser */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -211,6 +266,7 @@
 				9C6FC5C02A175365000C2BBC /* Sources */,
 				9C6FC5C12A175365000C2BBC /* Frameworks */,
 				9C6FC5C22A175365000C2BBC /* Resources */,
+				9C21E8002A17A93F005A8E57 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -266,15 +322,42 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9C21E8002A17A93F005A8E57 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9C6FC5C02A175365000C2BBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9C6FC5CA2A175365000C2BBC /* ContentView.swift in Sources */,
+				9C21E7FF2A17A760005A8E57 /* ProtocolRequest.swift in Sources */,
+				9C21E7F92A17A6CC005A8E57 /* NetworkError.swift in Sources */,
+				9C21E7F12A17A4F7005A8E57 /* DataParser.swift in Sources */,
 				9C6FC5C82A175365000C2BBC /* ChefsplaceApp.swift in Sources */,
 				9C6FC5E62A175E81000C2BBC /* Product.swift in Sources */,
 				9C6FC5E82A175E95000C2BBC /* Constants.swift in Sources */,
+				9C21E7F52A17A56F005A8E57 /* RequestType.swift in Sources */,
+				9C21E7F72A17A588005A8E57 /* RequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

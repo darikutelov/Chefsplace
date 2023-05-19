@@ -23,7 +23,7 @@ struct Product: Hashable, Identifiable, Codable {
 
 /// Conform to hashable
 extension Product {
-    static func ==(lhs: Product, rhs: Product) -> Bool {
+    static func == (lhs: Product, rhs: Product) -> Bool {
         return lhs.id == rhs.id && lhs.name == rhs.name
     }
     
