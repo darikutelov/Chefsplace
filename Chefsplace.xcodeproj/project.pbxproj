@@ -11,6 +11,8 @@
 		9C6FC5CA2A175365000C2BBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5C92A175365000C2BBC /* ContentView.swift */; };
 		9C6FC5CC2A175367000C2BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6FC5CB2A175367000C2BBC /* Assets.xcassets */; };
 		9C6FC5CF2A175367000C2BBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6FC5CE2A175367000C2BBC /* Preview Assets.xcassets */; };
+		9C6FC5E62A175E81000C2BBC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5E52A175E81000C2BBC /* Product.swift */; };
+		9C6FC5E82A175E95000C2BBC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5E72A175E95000C2BBC /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		9C6FC5C92A175365000C2BBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9C6FC5CB2A175367000C2BBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C6FC5CE2A175367000C2BBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9C6FC5E52A175E81000C2BBC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		9C6FC5E72A175E95000C2BBC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 		9C6FC5D82A175B5A000C2BBC /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				9C6FC5E72A175E95000C2BBC /* Constants.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 		9C6FC5E22A175D5B000C2BBC /* product */ = {
 			isa = PBXGroup;
 			children = (
+				9C6FC5E52A175E81000C2BBC /* Product.swift */,
 			);
 			path = product;
 			sourceTree = "<group>";
@@ -267,6 +273,8 @@
 			files = (
 				9C6FC5CA2A175365000C2BBC /* ContentView.swift in Sources */,
 				9C6FC5C82A175365000C2BBC /* ChefsplaceApp.swift in Sources */,
+				9C6FC5E62A175E81000C2BBC /* Product.swift in Sources */,
+				9C6FC5E82A175E95000C2BBC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
