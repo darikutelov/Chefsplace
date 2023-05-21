@@ -55,6 +55,7 @@ extension RequestProtocol {
     components.path = path
 
     if !urlParams.isEmpty {
+        print("url params", urlParams)
       components.queryItems = urlParams.map {
         URLQueryItem(name: $0, value: $1)
       }

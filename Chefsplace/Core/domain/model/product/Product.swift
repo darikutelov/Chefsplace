@@ -11,10 +11,10 @@ struct Product: Hashable, Identifiable, Codable {
     let id: String
     let name: String
     let images: [String]
-    let price: Decimal
-    let reducedPrice: Decimal
-    let shortDescription: String
     let category: ProductCategory
+    let price: Decimal
+    let reducedPrice: Decimal?
+    let shortDescription: String?
     let onPromotion: Bool?
     let barCode: String?
     let productCode: String?
@@ -29,6 +29,14 @@ extension Product {
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
+    }
+}
+
+// Coding Keys
+extension Product {
+    enum CodingKeys: String, CodingKey {
+        case id = "_id"
+        case name, images, price, reducedPrice, shortDescription, category, onPromotion, barCode, productCode, weight
     }
 }
 
@@ -49,3 +57,6 @@ struct NutritionalValue: Identifiable, Codable {
     let text: String
 }
 
+struct ProductsContainer: Decodable {
+    let products: [Product]
+}

@@ -20,11 +20,11 @@ struct ContentView: View {
         .padding()
         .task {
             await fetchCategories()
+            await fetchProducts()
         }
     }
     
     private func fetchCategories() async {
-
         do {
             let categories: ProductCategoriesContainer = try await requestManager
                 .perform(CategoriesRequest.getAllCategories)
@@ -34,6 +34,18 @@ struct ContentView: View {
             print(error.localizedDescription)
         }
     }
+    
+    private func fetchProducts() async {
+        do {
+            let products: ProductsContainer = try await requestManager
+                .perform(ProductsRequest.getAllProducts(page: 1, limit: 2))
+            
+            print(products)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+
 }
 
 struct ContentView_Previews: PreviewProvider {
