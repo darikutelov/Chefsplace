@@ -59,4 +59,5 @@ struct NutritionalValue: Identifiable, Codable {
 
 struct ProductsContainer: Decodable {
     let products: [Product]
+    let pagination: Pagination
 }
