@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     private let requestManager = RequestManager()
     
     var body: some View {
@@ -18,10 +18,10 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
-        .task {
-            await fetchCategories()
-            await fetchProducts()
-        }
+//        .task {
+//            await fetchCategories()
+//            await fetchProducts()
+//        }
     }
     
     private func fetchCategories() async {
@@ -48,8 +48,8 @@ struct ContentView: View {
 
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }

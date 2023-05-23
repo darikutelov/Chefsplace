@@ -13,7 +13,7 @@
 		9C21E7F92A17A6CC005A8E57 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21E7F82A17A6CC005A8E57 /* NetworkError.swift */; };
 		9C21E7FF2A17A760005A8E57 /* CategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21E7FE2A17A760005A8E57 /* CategoriesRequest.swift */; };
 		9C6FC5C82A175365000C2BBC /* ChefsplaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */; };
-		9C6FC5CA2A175365000C2BBC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5C92A175365000C2BBC /* ContentView.swift */; };
+		9C6FC5CA2A175365000C2BBC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5C92A175365000C2BBC /* MainView.swift */; };
 		9C6FC5CC2A175367000C2BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6FC5CB2A175367000C2BBC /* Assets.xcassets */; };
 		9C6FC5CF2A175367000C2BBC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6FC5CE2A175367000C2BBC /* Preview Assets.xcassets */; };
 		9C6FC5E62A175E81000C2BBC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5E52A175E81000C2BBC /* Product.swift */; };
@@ -30,6 +30,8 @@
 		9CF572EF2A1CE62300E9D8C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF572EE2A1CE62300E9D8C8 /* User.swift */; };
 		9CF572F12A1CEC7400E9D8C8 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF572F02A1CEC7400E9D8C8 /* Address.swift */; };
 		9CF572F32A1CEE3C00E9D8C8 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF572F22A1CEE3C00E9D8C8 /* Order.swift */; };
+		9CF572F62A1CF60600E9D8C8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9CF572F52A1CF60600E9D8C8 /* FirebaseAuth */; };
+		9CF572F82A1CF8ED00E9D8C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CF572F72A1CF8ED00E9D8C8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +42,7 @@
 		9C21E7FE2A17A760005A8E57 /* CategoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRequest.swift; sourceTree = "<group>"; };
 		9C6FC5C42A175365000C2BBC /* Chefsplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chefsplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefsplaceApp.swift; sourceTree = "<group>"; };
-		9C6FC5C92A175365000C2BBC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9C6FC5C92A175365000C2BBC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9C6FC5CB2A175367000C2BBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C6FC5CE2A175367000C2BBC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9C6FC5E52A175E81000C2BBC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 		9CF572EE2A1CE62300E9D8C8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9CF572F02A1CEC7400E9D8C8 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		9CF572F22A1CEE3C00E9D8C8 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		9CF572F72A1CF8ED00E9D8C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF572F62A1CF60600E9D8C8 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +139,7 @@
 		9C6FC5C62A175365000C2BBC /* Chefsplace */ = {
 			isa = PBXGroup;
 			children = (
+				9CF572F72A1CF8ED00E9D8C8 /* GoogleService-Info.plist */,
 				9C6FC5D52A175B24000C2BBC /* Core */,
 				9C6FC5D92A175BBA000C2BBC /* Home */,
 				9C6FC5DA2A175BD2000C2BBC /* Products */,
@@ -143,10 +148,6 @@
 				9C6FC5DC2A175BF6000C2BBC /* Cart */,
 				9C6FC5E02A175D0E000C2BBC /* Checkout */,
 				9C6FC5DD2A175C29000C2BBC /* Profile */,
-				9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */,
-				9C6FC5C92A175365000C2BBC /* ContentView.swift */,
-				9C6FC5CB2A175367000C2BBC /* Assets.xcassets */,
-				9C6FC5CD2A175367000C2BBC /* Preview Content */,
 			);
 			path = Chefsplace;
 			sourceTree = "<group>";
@@ -189,6 +190,8 @@
 		9C6FC5D82A175B5A000C2BBC /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				9C6FC5CB2A175367000C2BBC /* Assets.xcassets */,
+				9C6FC5CD2A175367000C2BBC /* Preview Content */,
 				9C6FC5E72A175E95000C2BBC /* Constants.swift */,
 				9CAE0A422A17B03500784F0D /* AppUserDefaultsKeys.swift */,
 			);
@@ -226,6 +229,7 @@
 		9C6FC5DD2A175C29000C2BBC /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				9CF572F92A1CF9FB00E9D8C8 /* Auth */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -233,6 +237,8 @@
 		9C6FC5DE2A175C6E000C2BBC /* views */ = {
 			isa = PBXGroup;
 			children = (
+				9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */,
+				9C6FC5C92A175365000C2BBC /* MainView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -324,6 +330,21 @@
 			path = auth;
 			sourceTree = "<group>";
 		};
+		9CF572F92A1CF9FB00E9D8C8 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				9CF572FA2A1CFA0900E9D8C8 /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		9CF572FA2A1CFA0900E9D8C8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -341,6 +362,9 @@
 			dependencies = (
 			);
 			name = Chefsplace;
+			packageProductDependencies = (
+				9CF572F52A1CF60600E9D8C8 /* FirebaseAuth */,
+			);
 			productName = Chefsplace;
 			productReference = 9C6FC5C42A175365000C2BBC /* Chefsplace.app */;
 			productType = "com.apple.product-type.application";
@@ -369,6 +393,9 @@
 				Base,
 			);
 			mainGroup = 9C6FC5BB2A175365000C2BBC;
+			packageReferences = (
+				9CF572F42A1CF60600E9D8C8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 9C6FC5C52A175365000C2BBC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -385,6 +412,7 @@
 			files = (
 				9C6FC5CF2A175367000C2BBC /* Preview Assets.xcassets in Resources */,
 				9C6FC5CC2A175367000C2BBC /* Assets.xcassets in Resources */,
+				9CF572F82A1CF8ED00E9D8C8 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C6FC5CA2A175365000C2BBC /* ContentView.swift in Sources */,
+				9C6FC5CA2A175365000C2BBC /* MainView.swift in Sources */,
 				9C21E7FF2A17A760005A8E57 /* CategoriesRequest.swift in Sources */,
 				9CAE0A382A17AE6200784F0D /* ApiManager.swift in Sources */,
 				9C21E7F92A17A6CC005A8E57 /* NetworkError.swift in Sources */,
@@ -565,10 +593,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Chefsplace/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Chefsplace/Core/utils/Preview Content\"";
 				DEVELOPMENT_TEAM = NV786K8W94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Chefsplace;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -594,10 +623,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Chefsplace/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Chefsplace/Core/utils/Preview Content\"";
 				DEVELOPMENT_TEAM = NV786K8W94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Chefsplace;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -638,6 +668,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9CF572F42A1CF60600E9D8C8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9CF572F52A1CF60600E9D8C8 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CF572F42A1CF60600E9D8C8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9C6FC5BC2A175365000C2BBC /* Project object */;
 }

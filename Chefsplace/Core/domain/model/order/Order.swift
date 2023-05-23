@@ -20,10 +20,10 @@ struct Order {
 }
 
 enum PaymentTypes {
-    case COD
-    case BankPayment
-    case CardPayment
-    case Other
+    case cod
+    case bankPayment
+    case cardPayment
+    case other
 }
 
 enum OrderStatus: String {
