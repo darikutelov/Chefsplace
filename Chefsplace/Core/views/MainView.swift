@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject var viewModel = MainViewViewModel()
     private let requestManager = RequestManager()
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            TabNavigationView(mainViewModel: viewModel)
         }
         .padding()
 //        .task {
