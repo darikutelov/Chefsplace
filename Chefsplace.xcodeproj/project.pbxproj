@@ -27,6 +27,9 @@
 		9CAE0A482A17C5F300784F0D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAE0A472A17C5F300784F0D /* Category.swift */; };
 		9CF572A02A19FA2C00E9D8C8 /* ProductsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF5729F2A19FA2C00E9D8C8 /* ProductsRequest.swift */; };
 		9CF572A22A19FC3C00E9D8C8 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF572A12A19FC3C00E9D8C8 /* Pagination.swift */; };
+		9CF572EF2A1CE62300E9D8C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF572EE2A1CE62300E9D8C8 /* User.swift */; };
+		9CF572F12A1CEC7400E9D8C8 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF572F02A1CEC7400E9D8C8 /* Address.swift */; };
+		9CF572F32A1CEE3C00E9D8C8 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF572F22A1CEE3C00E9D8C8 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,9 @@
 		9CAE0A472A17C5F300784F0D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9CF5729F2A19FA2C00E9D8C8 /* ProductsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsRequest.swift; sourceTree = "<group>"; };
 		9CF572A12A19FC3C00E9D8C8 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		9CF572EE2A1CE62300E9D8C8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9CF572F02A1CEC7400E9D8C8 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		9CF572F22A1CEE3C00E9D8C8 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +274,7 @@
 		9C6FC5E32A175DDD000C2BBC /* order */ = {
 			isa = PBXGroup;
 			children = (
+				9CF572F22A1CEE3C00E9D8C8 /* Order.swift */,
 			);
 			path = order;
 			sourceTree = "<group>";
@@ -275,6 +282,8 @@
 		9C6FC5E42A175E02000C2BBC /* user */ = {
 			isa = PBXGroup;
 			children = (
+				9CF572EE2A1CE62300E9D8C8 /* User.swift */,
+				9CF572F02A1CEC7400E9D8C8 /* Address.swift */,
 			);
 			path = user;
 			sourceTree = "<group>";
@@ -414,10 +423,12 @@
 				9C21E7F92A17A6CC005A8E57 /* NetworkError.swift in Sources */,
 				9CAE0A412A17AF8D00784F0D /* APIToken.swift in Sources */,
 				9C21E7F12A17A4F7005A8E57 /* DataParser.swift in Sources */,
+				9CF572F32A1CEE3C00E9D8C8 /* Order.swift in Sources */,
 				9C6FC5C82A175365000C2BBC /* ChefsplaceApp.swift in Sources */,
 				9CAE0A482A17C5F300784F0D /* Category.swift in Sources */,
 				9C6FC5E62A175E81000C2BBC /* Product.swift in Sources */,
 				9CAE0A3A2A17AE9C00784F0D /* RequestManager.swift in Sources */,
+				9CF572F12A1CEC7400E9D8C8 /* Address.swift in Sources */,
 				9C6FC5E82A175E95000C2BBC /* Constants.swift in Sources */,
 				9CAE0A432A17B03500784F0D /* AppUserDefaultsKeys.swift in Sources */,
 				9CAE0A3E2A17AF1F00784F0D /* AccessTokenManager.swift in Sources */,
@@ -426,6 +437,7 @@
 				9CF572A22A19FC3C00E9D8C8 /* Pagination.swift in Sources */,
 				9C21E7F72A17A588005A8E57 /* RequestProtocol.swift in Sources */,
 				9CF572A02A19FA2C00E9D8C8 /* ProductsRequest.swift in Sources */,
+				9CF572EF2A1CE62300E9D8C8 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
