@@ -17,25 +17,25 @@ struct TabNavigationView: View {
                 HomeView()
                     .tabItem {
                         Image(systemName: Constants.Text.TabView.homeIcon)
-                        Text(Constants.Text.TabView.homeLabel)
+                        Text(String(localized: "home_label"))
                     }
                     .tag(0)
                 ProductsView()
                     .tabItem {
                         Image(systemName: Constants.Text.TabView.searchIcon)
-                        Text(Constants.Text.TabView.searchLabel)
+                        Text(String(localized: "products_label"))
                     }
                     .tag(1)
                 WishlistView()
                     .tabItem {
                         Image(systemName: Constants.Text.TabView.addNFTIcon)
-                        Text(Constants.Text.TabView.addNFTLabel)
+                        Text(String(localized: "wishlist_label"))
                     }
                     .tag(2)
                 CartView()
                     .tabItem {
                         Image(systemName: Constants.Text.TabView.cartIcon)
-                        Text(Constants.Text.TabView.cartLabel)
+                        Text(String(localized: "cart_label"))
                     }
                     .tag(3)
                     .badge(2)
@@ -43,7 +43,7 @@ struct TabNavigationView: View {
                     ProfileView()
                         .tabItem {
                             Image(systemName: Constants.Text.TabView.profileIcon)
-                            Text(Constants.Text.TabView.profileLabel)
+                            Text(String(localized: "profile_label"))
                         }
                         .tag(4)
                 }
