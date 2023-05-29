@@ -13,22 +13,12 @@ struct HomeView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Утре отивам на разходка")
-                    .font(Font.custom("Lato", size: 24))
-                Text("Утре отивам на разходка")
-                    .font(Font.custom("PT Sans", size: 24))
-                Text("Утре отивам на разходка")
-                    .font(.title)
-                Text("Let's go for a walk")
-                    .font(Font.custom("Lato", size: 24))
-                Text("Let's go for a walk")
-                    .font(Font.custom("PT Sans", size: 24))
-                Text("Let's go for a walk")
-                    .font(.title)
+                Text("Home")
+                    .modifier(Heading())
             }
-        }
-        .fullScreenCover(isPresented: $isLoginScreenOpen) {
-            LoginView(isPresented: $isLoginScreenOpen)
+            .fullScreenCover(isPresented: $isLoginScreenOpen) {
+                LoginView(isPresented: $isLoginScreenOpen)
+            }
         }
     }
 }

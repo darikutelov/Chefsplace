@@ -4,3 +4,6 @@
 "cart_label" = "Cart";
 "profile_label" = "Profile";
 "signin_label" = "Sign In";
+"email_label" = "Email";
+"password_label" = "Password";
+"new_account_label" = "Create an account";

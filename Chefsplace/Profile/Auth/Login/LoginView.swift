@@ -9,31 +9,79 @@ import SwiftUI
 
 struct LoginView: View {
     @Binding var isPresented: Bool
+    @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
             VStack {
                 DismissButton(isPresented: $isPresented)
-                Text(String(localized: "signin_label"))
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
-                    .fontWeight(.bold)
                 Spacer()
+                Text(String(localized: "signin_label").uppercased())
+                    .font(Font.custom(
+                        Constants.Fonts.headingFont,
+                        size: Constants.Spacing.xxlarge
+                    ))
+                    .kerning(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(Constants.Colors.terciary)
+                    .padding(Constants.Spacing.small)
+                    .offset(y: -35)
+
                 VStack {
-                    Text("Sign In")
-                        .foregroundColor(.white)
+                    TextField(String(localized: "email_label"), text: $viewModel.email)
+                        .modifier(
+                            InputFieldWhithBg(error: !viewModel.errorMessage.isEmpty)
+                        )
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
+                        .padding(.vertical, Constants.Spacing.small)
+                    
+                    PasswordInputField(
+                        error: $viewModel.errorMessage,
+                        password: $viewModel.password
+                    )
+                    .autocapitalization(.none)
+                    .autocorrectionDisabled()
+                    .padding(.bottom, Constants.Spacing.small)
+                    
                     HStack {
                         Spacer()
+                        Button {
+                            viewModel.errorMessage = ""
+                            viewModel.login()
+                        } label: {
+                            CustomButton(
+                                buttonText: viewModel.isLoading ?
+                                    "Loading" :
+                                    String(localized: "signin_label"),
+                                buttonBackgroundColor: Constants.Colors.charcoal,
+                                iconName: Constants.IconNames.login,
+                                buttonWidth: Constants.Spacing.maxFormFieldWidth
+                            )
+                        }
+                        Spacer()
+                    }
+                    NavigationLink(destination: RegisterView()) {
+                        Text(String(localized: "new_account_label"))
+                            .foregroundColor(Constants.Colors.terciary)
+                            .padding(.top, Constants.Spacing.small)
                     }
                 }
-                .frame(minHeight: 300)
                 .background {
                     Rectangle()
                         .fill(
-                            Color(Constants.Colors.primary)
+                            LinearGradient(
+                                       gradient: Gradient(colors: [
+                                        Constants.Colors.primary.opacity(0.8),
+                                        Constants.Colors.primary,
+                                        Constants.Colors.primary.opacity(0.8)
+                                       ]),
+                                       startPoint: .topTrailing,
+                                       endPoint: .bottomLeading
+                                   )
+                            
                         )
                         .cornerRadius(Constants.Spacing.standardPlus)
-                        .padding(.bottom, -Constants.Spacing.xlarge)
-                        .ignoresSafeArea(.all)
+                        .frame(minHeight: 330)
+                        .offset(y: 30)
                 }
             }
             .background(

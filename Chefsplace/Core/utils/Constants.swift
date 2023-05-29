@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Constants {
     enum General {}
@@ -25,16 +26,18 @@ enum Constants {
     }
     
     enum Colors {
-        public static let textColor = "text"
-        public static let primary = "primary"
-        public static let secondary = "secondary"
-        public static let terciary = "terciary"
-        public static let quarternary = "quarternary"
-        public static let orange = "orange"
-        public static let error = "error"
+        public static let textColor = Color("text")
+        public static let primary = Color("primary")
+        public static let secondary = Color("secondary")
+        public static let terciary = Color("terciary")
+        public static let quarternary = Color("quarternary")
+        public static let orange = Color("orange")
+        public static let error = Color("error")
+        public static let charcoal = Color("charcoal")
     }
     
     enum Spacing {
+        public static let xxsmall = CGFloat(2.0)
         public static let xsmall = CGFloat(4.0)
         public static let small = CGFloat(8.0)
         public static let standard = CGFloat(12.0)
@@ -49,9 +52,23 @@ enum Constants {
         public static let megaLarge = CGFloat(92.0)
         public static let extraLarge = CGFloat(156.0)
         public static let maxWidth = CGFloat(400.0)
+        
+        public static let formFieldHeigh = CGFloat(50.0)
+        public static let maxFormFieldWidth = CGFloat(300.0)
     }
     
     enum Images {
         public static let loginBg = "login-bg"
+    }
+    
+    enum IconNames {
+        public static let visiblePasswordIcon = "eye.slash"
+        public static let notVisiblePasswordIcon = "eye"
+        public static let login = "arrow.right.square"
+    }
+    
+    enum Fonts {
+        public static let headingFont = "PT Sans"
+        public static let bodyFont = "Lato"
     }
 }

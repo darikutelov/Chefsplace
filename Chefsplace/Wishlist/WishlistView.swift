@@ -10,6 +10,7 @@ import SwiftUI
 struct WishlistView: View {
     var body: some View {
         Text("Wishlist")
+            .modifier(Heading())
     }
 }
 
