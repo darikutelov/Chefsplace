@@ -12,6 +12,8 @@
 		9C21E7F72A17A588005A8E57 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21E7F62A17A588005A8E57 /* RequestProtocol.swift */; };
 		9C21E7F92A17A6CC005A8E57 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21E7F82A17A6CC005A8E57 /* NetworkError.swift */; };
 		9C21E7FF2A17A760005A8E57 /* CategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21E7FE2A17A760005A8E57 /* CategoriesRequest.swift */; };
+		9C34FDD62A24D4FF00C584DC /* lato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C34FDD32A24CF2D00C584DC /* lato.ttf */; };
+		9C34FDD72A24D50300C584DC /* ptsans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C34FDD52A24D0D200C584DC /* ptsans.ttf */; };
 		9C6FC5C82A175365000C2BBC /* ChefsplaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */; };
 		9C6FC5CA2A175365000C2BBC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5C92A175365000C2BBC /* MainView.swift */; };
 		9C6FC5CC2A175367000C2BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6FC5CB2A175367000C2BBC /* Assets.xcassets */; };
@@ -52,6 +54,9 @@
 		9C21E7F62A17A588005A8E57 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 		9C21E7F82A17A6CC005A8E57 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		9C21E7FE2A17A760005A8E57 /* CategoriesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesRequest.swift; sourceTree = "<group>"; };
+		9C34FDD32A24CF2D00C584DC /* lato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lato.ttf; sourceTree = "<group>"; };
+		9C34FDD42A24CF9C00C584DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9C34FDD52A24D0D200C584DC /* ptsans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ptsans.ttf; sourceTree = "<group>"; };
 		9C6FC5C42A175365000C2BBC /* Chefsplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chefsplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefsplaceApp.swift; sourceTree = "<group>"; };
 		9C6FC5C92A175365000C2BBC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -164,6 +169,9 @@
 		9C6FC5C62A175365000C2BBC /* Chefsplace */ = {
 			isa = PBXGroup;
 			children = (
+				9C34FDD42A24CF9C00C584DC /* Info.plist */,
+				9C34FDD32A24CF2D00C584DC /* lato.ttf */,
+				9C34FDD52A24D0D200C584DC /* ptsans.ttf */,
 				9CF572F72A1CF8ED00E9D8C8 /* GoogleService-Info.plist */,
 				9C6FC5D52A175B24000C2BBC /* Core */,
 				9C6FC5D92A175BBA000C2BBC /* Home */,
@@ -458,6 +466,8 @@
 			files = (
 				9C6FC5CF2A175367000C2BBC /* Preview Assets.xcassets in Resources */,
 				9CF573162A1D040E00E9D8C8 /* Localizable.strings in Resources */,
+				9C34FDD72A24D50300C584DC /* ptsans.ttf in Resources */,
+				9C34FDD62A24D4FF00C584DC /* lato.ttf in Resources */,
 				9C6FC5CC2A175367000C2BBC /* Assets.xcassets in Resources */,
 				9CF572F82A1CF8ED00E9D8C8 /* GoogleService-Info.plist in Resources */,
 			);
@@ -669,6 +679,7 @@
 				DEVELOPMENT_TEAM = NV786K8W94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chefsplace/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Chefsplace;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -699,6 +710,7 @@
 				DEVELOPMENT_TEAM = NV786K8W94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Chefsplace/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Chefsplace;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

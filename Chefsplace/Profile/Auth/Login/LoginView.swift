@@ -13,14 +13,31 @@ struct LoginView: View {
     var body: some View {
             VStack {
                 DismissButton(isPresented: $isPresented)
-                Text("Sign In")
+                Text(String(localized: "signin_label"))
+                    .font(.largeTitle)
                     .foregroundColor(.white)
+                    .fontWeight(.bold)
                 Spacer()
-                Text("Sign In")
-                    .foregroundColor(.white)
+                VStack {
+                    Text("Sign In")
+                        .foregroundColor(.white)
+                    HStack {
+                        Spacer()
+                    }
+                }
+                .frame(minHeight: 300)
+                .background {
+                    Rectangle()
+                        .fill(
+                            Color(Constants.Colors.primary)
+                        )
+                        .cornerRadius(Constants.Spacing.standardPlus)
+                        .padding(.bottom, -Constants.Spacing.xlarge)
+                        .ignoresSafeArea(.all)
+                }
             }
             .background(
-                Image("login-bg")
+                Image(Constants.Images.loginBg)
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea(.all)
