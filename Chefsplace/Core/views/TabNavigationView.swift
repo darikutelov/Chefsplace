@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabNavigationView: View {
-    @AppStorage(Constants.Text.TabView.userdefaultsKey) var selectedTab = 0
+    @AppStorage(Constants.TabIcons.userdefaultsKey) var selectedTab = 0
     var mainViewModel: MainViewViewModel
     
     var body: some View {
@@ -16,25 +16,25 @@ struct TabNavigationView: View {
             TabView(selection: $selectedTab) {
                 HomeView()
                     .tabItem {
-                        Image(systemName: Constants.Text.TabView.homeIcon)
+                        Image(systemName: Constants.TabIcons.homeIcon)
                         Text(String(localized: "home_label"))
                     }
                     .tag(0)
                 ProductsView()
                     .tabItem {
-                        Image(systemName: Constants.Text.TabView.searchIcon)
+                        Image(systemName: Constants.TabIcons.searchIcon)
                         Text(String(localized: "products_label"))
                     }
                     .tag(1)
                 WishlistView()
                     .tabItem {
-                        Image(systemName: Constants.Text.TabView.addNFTIcon)
+                        Image(systemName: Constants.TabIcons.wishlistIcon)
                         Text(String(localized: "wishlist_label"))
                     }
                     .tag(2)
                 CartView()
                     .tabItem {
-                        Image(systemName: Constants.Text.TabView.cartIcon)
+                        Image(systemName: Constants.TabIcons.cartIcon)
                         Text(String(localized: "cart_label"))
                     }
                     .tag(3)
@@ -42,7 +42,7 @@ struct TabNavigationView: View {
                 if mainViewModel.currentUserId.isEmpty {
                     ProfileView()
                         .tabItem {
-                            Image(systemName: Constants.Text.TabView.profileIcon)
+                            Image(systemName: Constants.TabIcons.profileIcon)
                             Text(String(localized: "profile_label"))
                         }
                         .tag(4)

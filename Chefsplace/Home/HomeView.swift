@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var isLoginScreenOpen = true
+    
     var body: some View {
-        Text("Home")
+        NavigationStack {
+            ZStack {
+                Text("Home")
+            }
+        }
+        .fullScreenCover(isPresented: $isLoginScreenOpen) {
+            LoginView(isPresented: $isLoginScreenOpen)
+        }
     }
 }
 
