@@ -4,6 +4,8 @@
 "cart_label" = "Количка";
 "profile_label" = "Профил";
 "signin_label" = "Вход";
+"signup_label" = "Регистрация";
 "email_label" = "Емейл";
 "password_label" = "Парола";
 "new_account_label" = "Нов акаунт";
+"forgot_password_label" = "забравена парола";

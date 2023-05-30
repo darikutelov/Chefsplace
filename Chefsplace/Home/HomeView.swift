@@ -16,9 +16,9 @@ struct HomeView: View {
                 Text("Home")
                     .modifier(Heading())
             }
-            .fullScreenCover(isPresented: $isLoginScreenOpen) {
-                LoginView(isPresented: $isLoginScreenOpen)
-            }
+        }
+        .fullScreenCover(isPresented: $isLoginScreenOpen) {
+            LoginView(isPresented: $isLoginScreenOpen)
         }
     }
 }

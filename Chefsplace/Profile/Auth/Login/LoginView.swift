@@ -12,6 +12,7 @@ struct LoginView: View {
     @StateObject var viewModel = LoginViewViewModel()
     
     var body: some View {
+        NavigationView {
             VStack {
                 DismissButton(isPresented: $isPresented)
                 Spacer()
@@ -23,8 +24,7 @@ struct LoginView: View {
                     .kerning(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
                     .foregroundColor(Constants.Colors.terciary)
                     .padding(Constants.Spacing.small)
-                    .offset(y: -35)
-
+                
                 VStack {
                     TextField(String(localized: "email_label"), text: $viewModel.email)
                         .modifier(
@@ -50,7 +50,7 @@ struct LoginView: View {
                         } label: {
                             CustomButton(
                                 buttonText: viewModel.isLoading ?
-                                    "Loading" :
+                                "Loading" :
                                     String(localized: "signin_label"),
                                 buttonBackgroundColor: Constants.Colors.charcoal,
                                 iconName: Constants.IconNames.login,
@@ -59,30 +59,38 @@ struct LoginView: View {
                         }
                         Spacer()
                     }
+                    HStack {
+                        Spacer()
+                        NavigationLink(destination: RegisterView()) {
+                            Text(String(localized: "forgot_password_label"))
+                                .foregroundColor(Constants.Colors.charcoal)
+                        }
+                    }
+                    .frame(maxWidth: 300)
                     NavigationLink(destination: RegisterView()) {
                         Text(String(localized: "new_account_label"))
                             .foregroundColor(Constants.Colors.terciary)
-                            .padding(.top, Constants.Spacing.small)
+                            .padding(.vertical, Constants.Spacing.small)
                     }
                 }
+                .padding()
                 .background {
                     Rectangle()
                         .fill(
                             LinearGradient(
-                                       gradient: Gradient(colors: [
-                                        Constants.Colors.primary.opacity(0.8),
-                                        Constants.Colors.primary,
-                                        Constants.Colors.primary.opacity(0.8)
-                                       ]),
-                                       startPoint: .topTrailing,
-                                       endPoint: .bottomLeading
-                                   )
+                                gradient: Gradient(colors: [
+                                    Constants.Colors.primary.opacity(0.95),
+                                    Constants.Colors.primary
+                                ]),
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            )
                             
                         )
-                        .cornerRadius(Constants.Spacing.standardPlus)
-                        .frame(minHeight: 330)
-                        .offset(y: 30)
+                    .cornerRadius(Constants.Spacing.standardPlus)
+                        .frame(maxWidth: 350)
                 }
+                Spacer()
             }
             .background(
                 Image(Constants.Images.loginBg)
@@ -91,6 +99,7 @@ struct LoginView: View {
                     .ignoresSafeArea(.all)
             )
         }
+    }
 }
 
 struct DismissButton: View {

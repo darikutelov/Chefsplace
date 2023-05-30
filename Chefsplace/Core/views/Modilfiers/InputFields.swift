@@ -13,12 +13,12 @@ struct InputFieldWhithBg: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
-            .foregroundColor(Constants.Colors.primary)
-            .frame(height: Constants.Spacing.formFieldHeigh)
             .background(
                 RoundedRectangle(cornerRadius: Constants.Spacing.standard)
                     .fill(Constants.Colors.terciary)
             )
+            .foregroundColor(Constants.Colors.primary)
+            .frame(height: Constants.Spacing.formFieldHeigh)
             .overlay(
                 RoundedRectangle(cornerRadius: Constants.Spacing.standard)
                     .stroke(error ? Constants.Colors.error : Color(.clear),

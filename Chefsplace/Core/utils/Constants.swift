@@ -59,12 +59,14 @@ enum Constants {
     
     enum Images {
         public static let loginBg = "login-bg"
+        public static let registerBg = "register-bg"
     }
     
     enum IconNames {
         public static let visiblePasswordIcon = "eye.slash"
         public static let notVisiblePasswordIcon = "eye"
         public static let login = "arrow.right.square"
+        public static let register = "square.and.pencil"
     }
     
     enum Fonts {
