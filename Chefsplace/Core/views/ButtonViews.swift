@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CustomButton: View {
+    @Binding var isLoading: Bool
     let buttonText: String
     var buttonTextColor: Color = .white
     var buttonBackgroundColor: Color = Constants.Colors.orange
@@ -16,12 +17,18 @@ struct CustomButton: View {
     
     var body: some View {
         HStack(alignment: .center) {
-            if !iconName.isEmpty {
-                Image(systemName: iconName)
+            if isLoading {
+                ProgressView()
+            } else {
+                HStack {
+                    if !iconName.isEmpty {
+                        Image(systemName: iconName)
+                    }
+                    
+                    Text(buttonText.capitalized)
+                        .fontWeight(.semibold)
+                }
             }
-            
-            Text(buttonText.capitalized)
-                .fontWeight(.semibold)
         }
         .foregroundColor(buttonTextColor.opacity(0.9))
         .font(.body)
@@ -38,6 +45,9 @@ struct CustomButton: View {
 
 struct CustomButton_Previews: PreviewProvider {
     static var previews: some View {
-        CustomButton(buttonText: "Sign In", iconName: "heart", buttonWidth: 300.0)
+        CustomButton(isLoading: .constant(false),
+                     buttonText: "Sign In",
+                     iconName: "heart",
+                     buttonWidth: 300.0)
     }
 }

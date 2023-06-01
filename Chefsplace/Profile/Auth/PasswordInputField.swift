@@ -23,7 +23,12 @@ struct PasswordInputField: View {
                     SecureField(fieldLabel, text: $password)
                 }
             }
-            .modifier(InputFieldWhithBg(error: !error.isEmpty))
+            .modifier(InputFieldWhithBg(
+                error: !error.isEmpty,
+                showPlaceHolder: password.isEmpty,
+                placeholder: String(localized: "password_label")
+                )
+            )
             
             HStack {
                 Spacer()

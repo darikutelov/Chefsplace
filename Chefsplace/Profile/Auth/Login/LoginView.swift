@@ -26,9 +26,13 @@ struct LoginView: View {
                     .padding(Constants.Spacing.small)
                 
                 VStack {
-                    TextField(String(localized: "email_label"), text: $viewModel.email)
+                    TextField("", text: $viewModel.email)
                         .modifier(
-                            InputFieldWhithBg(error: !viewModel.errorMessage.isEmpty)
+                            InputFieldWhithBg(
+                                error: !viewModel.errorMessage.isEmpty,
+                                showPlaceHolder: $viewModel.email.wrappedValue.isEmpty,
+                                placeholder: String(localized: "email_label")
+                            )
                         )
                         .autocapitalization(.none)
                         .autocorrectionDisabled()
@@ -49,6 +53,7 @@ struct LoginView: View {
                             viewModel.login()
                         } label: {
                             CustomButton(
+                                isLoading: $viewModel.isLoading,
                                 buttonText: viewModel.isLoading ?
                                 "Loading" :
                                     String(localized: "signin_label"),

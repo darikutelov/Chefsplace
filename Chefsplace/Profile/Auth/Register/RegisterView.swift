@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct RegisterView: View {
+    enum Field: Hashable {
+            case emailField
+            case passwordField
+        }
+    
     @StateObject var viewModel = RegisterViewViewModel()
+    @FocusState private var focusedField: Field?
     
     var body: some View {
         VStack {
@@ -23,9 +29,14 @@ struct RegisterView: View {
                 .padding(Constants.Spacing.small)
             
             VStack {
-                TextField(String(localized: "email_label"), text: $viewModel.email)
+                TextField("", text: $viewModel.email)
+                    .focused($focusedField, equals: .emailField)
                     .modifier(
-                        InputFieldWhithBg(error: !viewModel.errorMessage.isEmpty)
+                        InputFieldWhithBg(
+                            error: !viewModel.errorMessage.isEmpty,
+                            showPlaceHolder: $viewModel.email.wrappedValue.isEmpty,
+                            placeholder: String(localized: "email_label")
+                        )
                     )
                     .autocapitalization(.none)
                     .autocorrectionDisabled()
@@ -51,12 +62,14 @@ struct RegisterView: View {
                     Spacer()
                     Button {
                         viewModel.errorMessage = ""
-                        viewModel.register()
+                        Task {
+                           await viewModel.register()
+                        }
+                        
                     } label: {
                         CustomButton(
-                            buttonText: viewModel.isLoading ?
-                            "Loading" :
-                                String(localized: "signup_label"),
+                            isLoading: $viewModel.isLoading,
+                            buttonText: String(localized: "signup_label"),
                             buttonBackgroundColor: Constants.Colors.primary,
                             iconName: Constants.IconNames.register,
                             buttonWidth: Constants.Spacing.maxFormFieldWidth
@@ -91,6 +104,9 @@ struct RegisterView: View {
                 .scaledToFill()
                 .ignoresSafeArea(.all)
         )
+        .onAppear {
+            focusedField = .emailField
+        }
     }
 }
 
