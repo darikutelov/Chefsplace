@@ -29,7 +29,6 @@ struct LoginView: View {
                     TextField("", text: $viewModel.email)
                         .modifier(
                             InputFieldWhithBg(
-                                error: !viewModel.errorMessage.isEmpty,
                                 showPlaceHolder: $viewModel.email.wrappedValue.isEmpty,
                                 placeholder: String(localized: "email_label")
                             )
@@ -39,7 +38,6 @@ struct LoginView: View {
                         .padding(.vertical, Constants.Spacing.small)
                     
                     PasswordInputField(
-                        error: $viewModel.errorMessage,
                         password: $viewModel.password
                     )
                     .autocapitalization(.none)

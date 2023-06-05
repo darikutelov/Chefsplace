@@ -9,3 +9,6 @@
 "password_label" = "Парола";
 "new_account_label" = "Нов акаунт";
 "forgot_password_label" = "забравена парола";
+"error" = "Грешка";
+"error_all_fields" = "Моля, попълнете всички полета";
+"error_valid_email" = "Моля, въведете правилен имейл";

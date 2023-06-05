@@ -8,4 +8,7 @@
 "email_label" = "Email";
 "password_label" = "Password";
 "new_account_label" = "Create an account";
-"forgot_password_label" = "forgotten password?";
+"forgot_password_label" = "forgotten password";
+"error" = "Error";
+"error_all_fields" = "Please, fill in all fields";
+"error_valid_email" = "Please, enter valid email";

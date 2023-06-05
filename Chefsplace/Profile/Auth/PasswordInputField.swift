@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct PasswordInputField: View {
-    var fieldLabel = String(localized: "password_label")
-    @Binding var error: String
+    let fieldLabel = String(localized: "password_label")
     @Binding var password: String
     @State var showPassword = false
     
@@ -23,8 +22,8 @@ struct PasswordInputField: View {
                     SecureField(fieldLabel, text: $password)
                 }
             }
-            .modifier(InputFieldWhithBg(
-                error: !error.isEmpty,
+            .modifier(
+                InputFieldWhithBg(
                 showPlaceHolder: password.isEmpty,
                 placeholder: String(localized: "password_label")
                 )
@@ -52,7 +51,6 @@ struct PasswordInputField: View {
 
 struct PasswordInputField_Previews: PreviewProvider {
     static var previews: some View {
-        PasswordInputField(error: .constant(""),
-                           password: .constant("123456"))
+        PasswordInputField(password: .constant("123456"))
     }
 }

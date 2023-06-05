@@ -7,8 +7,13 @@
 
 import SwiftUI
 
+enum InputFieldStatus {
+    case clear
+    case error
+    case valid
+}
+
 struct InputFieldWhithBg: ViewModifier {
-    var error: Bool
     var showPlaceHolder: Bool
     var placeholder: String
     let placeHolderColor: Color = Constants.Colors.charcoal
@@ -16,25 +21,18 @@ struct InputFieldWhithBg: ViewModifier {
     
     func body(content: Content) -> some View {
         ZStack(alignment: .leading) {
-            content
-                .padding()
-                .foregroundColor(placeHolderColor)
-                .background(
-                    RoundedRectangle(cornerRadius: Constants.Spacing.standard)
-                        .fill(bgColor)
-                )
-                .frame(height: Constants.Spacing.formFieldHeigh)
-                .overlay(
-                    RoundedRectangle(cornerRadius: Constants.Spacing.standard)
-                        .stroke(error ? Constants.Colors.error : Color(.clear),
-                                lineWidth: Constants.Spacing.xxsmall)
-                )
-                .frame(maxWidth: Constants.Spacing.maxFormFieldWidth)
+            RoundedRectangle(cornerRadius: Constants.Spacing.standard)
+                .fill(bgColor)
+                .frame(width: Constants.Spacing.maxFormFieldWidth, height: Constants.Spacing.formFieldHeigh)
             if showPlaceHolder {
                 Text(placeholder)
                     .foregroundColor(placeHolderColor)
                     .padding(.horizontal, 15)
             }
+            content
+                .padding()
+                .foregroundColor(placeHolderColor)
+                .frame(width: Constants.Spacing.maxFormFieldWidth, height: Constants.Spacing.formFieldHeigh)
         }
     }
 }

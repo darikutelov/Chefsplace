@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C21C9422A28C0D00016F68C /* AuthErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21C9412A28C0D00016F68C /* AuthErrorView.swift */; };
 		9C21E7F12A17A4F7005A8E57 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21E7F02A17A4F7005A8E57 /* DataParser.swift */; };
 		9C21E7F52A17A56F005A8E57 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21E7F42A17A56F005A8E57 /* RequestType.swift */; };
 		9C21E7F72A17A588005A8E57 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21E7F62A17A588005A8E57 /* RequestProtocol.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C21C9412A28C0D00016F68C /* AuthErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthErrorView.swift; sourceTree = "<group>"; };
 		9C21E7F02A17A4F7005A8E57 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		9C21E7F42A17A56F005A8E57 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		9C21E7F62A17A588005A8E57 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 				9CF572FF2A1CFC4F00E9D8C8 /* Register */,
 				9CF572FA2A1CFA0900E9D8C8 /* Login */,
 				9C3278F02A24EFCD0020A9F6 /* PasswordInputField.swift */,
+				9C21C9412A28C0D00016F68C /* AuthErrorView.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				9CF572A22A19FC3C00E9D8C8 /* Pagination.swift in Sources */,
 				9C21E7F72A17A588005A8E57 /* RequestProtocol.swift in Sources */,
 				9CF572A02A19FA2C00E9D8C8 /* ProductsRequest.swift in Sources */,
+				9C21C9422A28C0D00016F68C /* AuthErrorView.swift in Sources */,
 				9C3278ED2A24EBD00020A9F6 /* BodyText.swift in Sources */,
 				9CF572EF2A1CE62300E9D8C8 /* User.swift in Sources */,
 			);
