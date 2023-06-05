@@ -73,4 +73,14 @@ enum Constants {
         public static let headingFont = "PT Sans"
         public static let bodyFont = "Lato"
     }
+    
+    enum ValidationRegex {
+        public static let email = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        public static let password = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"
+        //    At least 8 characters long
+        //    Contains at least one uppercase letter
+        //    Contains at least one lowercase letter
+        //    Contains at least one numeric digit
+        //    Contains at least one special character from the set @$!%*?&
+    }
 }

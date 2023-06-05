@@ -125,6 +125,10 @@ struct RegisterView: View {
             )
             .onAppear {
                 focusedField = .emailField
+
+            }
+            .onDisappear {
+                viewModel.resetState()
             }
             
             if !viewModel.errorMessage.isEmpty {

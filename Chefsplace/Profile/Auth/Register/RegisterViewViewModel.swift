@@ -9,21 +9,8 @@ import SwiftUI
 import Foundation
 import FirebaseAuth
 
-final class RegisterViewViewModel: ObservableObject {
-    @Published var email = "" {
-        willSet {
-            Task {
-                await validateEmail()
-            }
-        }
-    }
-    @Published var password = "" {
-        willSet {
-            Task {
-                await validatePassword(password)
-            }
-        }
-    }
+final class RegisterViewViewModel: AuthViewModel, ObservableObject {
+
     @Published var rePassword = "" {
         willSet {
             Task {
@@ -31,10 +18,7 @@ final class RegisterViewViewModel: ObservableObject {
             }
         }
     }
-    @MainActor @Published var errorMessage = ""
-    @MainActor @Published var isLoading = false
-    @MainActor @Published var emailFieldStatus = InputFieldStatus.clear
-    @MainActor @Published var passwordFieldStatus = InputFieldStatus.clear
+    
     @MainActor @Published var rePasswordFieldStatus = InputFieldStatus.clear
     
     func register() async {
@@ -94,67 +78,22 @@ final class RegisterViewViewModel: ObservableObject {
     @MainActor private func validate() -> Bool {
         errorMessage = ""
         
-        guard !email.trimmingCharacters(in: .whitespaces).isEmpty,
-              !password.trimmingCharacters(in: .whitespaces).isEmpty else {
-            errorMessage = String(localized: "error_all_fields") + "."
+        guard emailFieldStatus == .valid && !email.isEmpty else {
+            errorMessage = String(localized: "error_valid_email")
             return false
         }
         
-        let emailRegexPattern = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        
-        guard let emailRegex = try? NSRegularExpression(pattern: emailRegexPattern) else {
-            // Handle invalid regex pattern
+        guard passwordFieldStatus == .valid && !password.isEmpty else {
+            errorMessage = String(localized: "error_valid_password")
             return false
         }
         
-        let range = NSRange(location: 0, length: email.utf16.count)
-        let matches = emailRegex.firstMatch(in: email, options: [], range: range)
-        
-        guard matches != nil else {
-            errorMessage = String(localized: "error_valid_email") + "."
+        guard rePasswordFieldStatus == .valid && !rePassword.isEmpty else {
+            errorMessage = String(localized: "error_valid_rePassword")
             return false
         }
         
         return true
-    }
-    
-    @MainActor func validateEmail() {
-        let emailRegexPattern = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        
-        guard let emailRegex = try? NSRegularExpression(pattern: emailRegexPattern) else {
-            emailFieldStatus = InputFieldStatus.error
-            return
-        }
-        
-        let range = NSRange(location: 0, length: email.utf16.count)
-        let matches = emailRegex.firstMatch(in: email, options: [], range: range)
-        
-        if email.trimmingCharacters(in: .whitespaces).isEmpty || matches == nil {
-            emailFieldStatus = InputFieldStatus.error
-        } else {
-            emailFieldStatus = InputFieldStatus.valid
-        }
-    }
-    
-    //    At least 8 characters long
-    //    Contains at least one uppercase letter
-    //    Contains at least one lowercase letter
-    //    Contains at least one numeric digit
-    //    Contains at least one special character from the set @$!%*?&
-    @MainActor func validatePassword(_ text: String) {
-        let passwordRegexPattern = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"
-        guard let passwordRegex = try? NSRegularExpression(pattern: passwordRegexPattern) else {
-            passwordFieldStatus = InputFieldStatus.error
-            return
-        }
-        
-        let range = NSRange(location: 0, length: text.utf16.count)
-        let matches = passwordRegex.firstMatch(in: text, options: [], range: range)
-        if password.trimmingCharacters(in: .whitespaces).isEmpty || matches == nil {
-            passwordFieldStatus = InputFieldStatus.error
-        } else {
-            passwordFieldStatus = InputFieldStatus.valid
-        }
     }
     
     @MainActor func validateRePassword(_ text: String) {

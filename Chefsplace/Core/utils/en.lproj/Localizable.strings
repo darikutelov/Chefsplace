@@ -12,3 +12,5 @@
 "error" = "Error";
 "error_all_fields" = "Please, fill in all fields";
 "error_valid_email" = "Please, enter valid email";
+"error_valid_password" = "Enter valid password - At least 8 characters long, one uppercase letter, one lowercase letter, one numeric digit,  one special character from @$!%*?&!";
+"error_valid_rePassword" = "Both passwords should match";
