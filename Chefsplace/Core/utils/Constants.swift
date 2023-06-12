@@ -34,6 +34,7 @@ enum Constants {
         public static let orange = Color("orange")
         public static let error = Color("error")
         public static let charcoal = Color("charcoal")
+        public static let authBg = Color("authbg")
     }
     
     enum Spacing {
@@ -58,7 +59,7 @@ enum Constants {
     }
     
     enum Images {
-        public static let loginBg = "lemon"
+        public static let loginBg = "knife"
         public static let registerBg = "knife"
     }
     
@@ -67,6 +68,7 @@ enum Constants {
         public static let notVisiblePasswordIcon = "eye"
         public static let login = "arrow.right.square"
         public static let register = "square.and.pencil"
+        public static let arrowBack = "arrow.backward"
     }
     
     enum Fonts {

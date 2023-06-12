@@ -10,7 +10,6 @@ import Foundation
 import FirebaseAuth
 
 final class RegisterViewViewModel: AuthViewModel, ObservableObject {
-
     @Published var rePassword = "" {
         willSet {
             Task {
@@ -18,7 +17,6 @@ final class RegisterViewViewModel: AuthViewModel, ObservableObject {
             }
         }
     }
-    
     @MainActor @Published var rePasswordFieldStatus = InputFieldStatus.clear
     
     func register() async {
@@ -36,7 +34,12 @@ final class RegisterViewViewModel: AuthViewModel, ObservableObject {
         }
         
         do {
-            let authDataResult = try await Auth.auth().createUser(withEmail: email, password: password)
+            let authDataResult = try await Auth
+                .auth()
+                .createUser(
+                    withEmail: email,
+                    password: password
+                )
             let user = authDataResult.user
             
             await insertUserRecord(id: user.uid)

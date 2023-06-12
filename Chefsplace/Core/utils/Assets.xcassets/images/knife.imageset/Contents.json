@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "knife@1x.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "knife@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },

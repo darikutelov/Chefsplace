@@ -10,13 +10,15 @@ import SwiftUI
 import FirebaseAuth
 
 final class LoginViewViewModel: AuthViewModel, ObservableObject {
-
     func login() async {
         guard validate() else {
             return
         }
+        
         do {
-            let authDataResult = try await Auth.auth().signIn(withEmail: email, password: password)
+            let authDataResult = try await Auth
+                .auth()
+                .signIn(withEmail: email, password: password)
             let user = authDataResult.user
             
             print(user.uid)

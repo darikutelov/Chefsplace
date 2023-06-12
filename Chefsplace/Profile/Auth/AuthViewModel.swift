@@ -8,38 +8,36 @@
 import Foundation
 import SwiftUI
 
+enum Field: Hashable {
+    case emailField
+    case passwordField
+    case rePasswordField
+}
+
 class AuthViewModel {
     @MainActor @Published var errorMessage = ""
     @MainActor @Published var isLoading = false
     
-    @Published var email = "" {
+    @Published var email: String = "" {
         willSet {
-            Task {@MainActor in
-                emailFieldStatus = validateAuthField(
-                    email,
-                    regexPattern: Constants.ValidationRegex.email
-                )
-            }
+            print(email)
+            setEmailFieldStatus(email)
         }
     }
-    @MainActor @Published var emailFieldStatus = InputFieldStatus.clear
-    
     @Published var password = "" {
         willSet {
-            Task {@MainActor in
-                passwordFieldStatus = validateAuthField(
-                    password,
-                    regexPattern: Constants.ValidationRegex.password
-                )
-            }
+            setPasswordFieldStatus(password)
         }
+        
     }
+    
+    @MainActor @Published var emailFieldStatus = InputFieldStatus.clear
     @MainActor @Published var passwordFieldStatus = InputFieldStatus.clear
     
     @MainActor func validateAuthField(_ text: String, regexPattern: String = "") -> InputFieldStatus {
-//        if text.trimmingCharacters(in: .whitespaces).isEmpty {
-//            return .error
-//        }
+        if text.trimmingCharacters(in: .whitespaces).isEmpty {
+            return .error
+        }
         
         if !regexPattern.isEmpty {
             guard let emailRegex = try? NSRegularExpression(pattern: regexPattern) else {
@@ -57,7 +55,11 @@ class AuthViewModel {
         return .valid
     }
     
-    func getFieldBorderColor(_ fieldStatus: InputFieldStatus) -> Color {
+    func getFieldBorderColor(_ fieldStatus: InputFieldStatus, isPristine: Bool) -> Color {
+        guard !isPristine else {
+            return Color.clear
+        }
+        
         switch fieldStatus {
         case .clear:
             return Color.clear
@@ -75,5 +77,23 @@ class AuthViewModel {
         isLoading = false
         emailFieldStatus = InputFieldStatus.clear
         passwordFieldStatus = InputFieldStatus.clear
+    }
+    
+    private func setEmailFieldStatus(_ email: String) {
+        Task {@MainActor in
+            emailFieldStatus = validateAuthField(
+                email,
+                regexPattern: Constants.ValidationRegex.email
+            )
+        }
+    }
+    
+    private func setPasswordFieldStatus(_ password: String) {
+            Task {@MainActor in
+                passwordFieldStatus = validateAuthField(
+                    password,
+                    regexPattern: Constants.ValidationRegex.password
+                )
+            }
     }
 }
