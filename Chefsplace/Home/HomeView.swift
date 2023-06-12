@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var isLoginScreenOpen = false
+    @State var isLoginScreenOpen = true
     
     var body: some View {
         NavigationStack {
-            RegisterView()
+            Text("Home")
         }
         .fullScreenCover(isPresented: $isLoginScreenOpen) {
             LoginView(isPresented: $isLoginScreenOpen)

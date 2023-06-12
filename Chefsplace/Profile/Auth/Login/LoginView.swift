@@ -22,8 +22,9 @@ struct LoginView: View {
                         size: Constants.Spacing.xxlarge
                     ))
                     .kerning(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
-                    .foregroundColor(Constants.Colors.terciary)
+                    .foregroundColor(Constants.Colors.primary)
                     .padding(Constants.Spacing.small)
+                    .offset(y: -Constants.Spacing.xxxlarge)
                 
                 VStack {
                     TextField("", text: $viewModel.email)
@@ -35,6 +36,13 @@ struct LoginView: View {
                         )
                         .autocapitalization(.none)
                         .autocorrectionDisabled()
+                        .overlay(
+                            RoundedRectangle(cornerRadius: Constants.Spacing.standard)
+                                .stroke(
+                                    viewModel.getFieldBorderColor(viewModel.emailFieldStatus),
+                                    lineWidth: Constants.Spacing.xxsmall
+                                )
+                        )
                         .padding(.vertical, Constants.Spacing.small)
                     
                     PasswordInputField(
@@ -42,13 +50,22 @@ struct LoginView: View {
                     )
                     .autocapitalization(.none)
                     .autocorrectionDisabled()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: Constants.Spacing.standard)
+                            .stroke(
+                                viewModel.getFieldBorderColor(viewModel.passwordFieldStatus),
+                                lineWidth: Constants.Spacing.xxsmall
+                            )
+                    )
                     .padding(.bottom, Constants.Spacing.small)
                     
                     HStack {
                         Spacer()
                         Button {
                             viewModel.errorMessage = ""
-                            viewModel.login()
+                            Task {
+                               await viewModel.login()
+                            }
                         } label: {
                             CustomButton(
                                 isLoading: $viewModel.isLoading,
@@ -93,13 +110,17 @@ struct LoginView: View {
                     .cornerRadius(Constants.Spacing.standardPlus)
                         .frame(maxWidth: 350)
                 }
-                Spacer()
+                .offset(y: -Constants.Spacing.xxlarge)
             }
             .background(
-                Image(Constants.Images.loginBg)
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea(.all)
+                VStack {
+                    Image(Constants.Images.loginBg)
+                        .resizable()
+                        .scaledToFit()
+                        .ignoresSafeArea(.all)
+                        .offset(y: Constants.Spacing.small)
+                    Spacer()
+                }
             )
         }
     }

@@ -58,8 +58,8 @@ enum Constants {
     }
     
     enum Images {
-        public static let loginBg = "login-bg"
-        public static let registerBg = "register-bg"
+        public static let loginBg = "lemon"
+        public static let registerBg = "knife"
     }
     
     enum IconNames {

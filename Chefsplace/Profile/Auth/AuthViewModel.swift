@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class AuthViewModel {
     @MainActor @Published var errorMessage = ""
@@ -36,9 +37,9 @@ class AuthViewModel {
     @MainActor @Published var passwordFieldStatus = InputFieldStatus.clear
     
     @MainActor func validateAuthField(_ text: String, regexPattern: String = "") -> InputFieldStatus {
-        if text.trimmingCharacters(in: .whitespaces).isEmpty {
-            return .error
-        }
+//        if text.trimmingCharacters(in: .whitespaces).isEmpty {
+//            return .error
+//        }
         
         if !regexPattern.isEmpty {
             guard let emailRegex = try? NSRegularExpression(pattern: regexPattern) else {
@@ -54,6 +55,17 @@ class AuthViewModel {
         }
         
         return .valid
+    }
+    
+    func getFieldBorderColor(_ fieldStatus: InputFieldStatus) -> Color {
+        switch fieldStatus {
+        case .clear:
+            return Color.clear
+        case .error:
+            return Constants.Colors.error
+        case .valid:
+            return Constants.Colors.primary
+        }
     }
     
     @MainActor func resetState() {

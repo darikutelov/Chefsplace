@@ -28,6 +28,7 @@ struct RegisterView: View {
                     .kerning(/*@START_MENU_TOKEN@*/1.0/*@END_MENU_TOKEN@*/)
                     .foregroundColor(Constants.Colors.charcoal)
                     .padding(Constants.Spacing.small)
+                    //.offset(y: -Constants.Spacing.xxlarge)
                 
                 VStack {
                     TextField("", text: $viewModel.email)
@@ -43,7 +44,7 @@ struct RegisterView: View {
                         .overlay(
                             RoundedRectangle(cornerRadius: Constants.Spacing.standard)
                                 .stroke(
-                                    getFieldBorderColor(viewModel.emailFieldStatus),
+                                    viewModel.getFieldBorderColor(viewModel.emailFieldStatus),
                                     lineWidth: Constants.Spacing.xxsmall
                                 )
                         )
@@ -57,7 +58,7 @@ struct RegisterView: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: Constants.Spacing.standard)
                             .stroke(
-                                getFieldBorderColor(viewModel.passwordFieldStatus),
+                                viewModel.getFieldBorderColor(viewModel.passwordFieldStatus),
                                 lineWidth: Constants.Spacing.xxsmall
                             )
                     )
@@ -71,7 +72,7 @@ struct RegisterView: View {
                     .overlay(
                         RoundedRectangle(cornerRadius: Constants.Spacing.standard)
                             .stroke(
-                                getFieldBorderColor(viewModel.rePasswordFieldStatus),
+                                viewModel.getFieldBorderColor(viewModel.rePasswordFieldStatus),
                                 lineWidth: Constants.Spacing.xxsmall
                             )
                     )
@@ -116,12 +117,15 @@ struct RegisterView: View {
                         .frame(maxWidth: 350)
                 }
                 Spacer()
+                //.offset(y: -Constants.Spacing.xxlarge)
             }
             .background(
                 Image(Constants.Images.registerBg)
                     .resizable()
                     .scaledToFill()
+                    .rotationEffect(Angle(degrees: -45))
                     .ignoresSafeArea(.all)
+                    .offset(x:-50)
             )
             .onAppear {
                 focusedField = .emailField
@@ -138,17 +142,6 @@ struct RegisterView: View {
                         .padding()
                 }
             }
-        }
-    }
-    
-    private func getFieldBorderColor(_ fieldStatus: InputFieldStatus) -> Color {
-        switch fieldStatus {
-        case .clear:
-            return Color.clear
-        case .error:
-            return Constants.Colors.error
-        case .valid:
-            return Constants.Colors.primary
         }
     }
 }
