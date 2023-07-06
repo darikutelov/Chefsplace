@@ -16,15 +16,13 @@ final class ProductViewViewModel {
     @MainActor var products: [Product] = []
     @MainActor var isLoading: Bool = false
     @MainActor var errorMessage: String = ""
-    
-  
 }
 
 // MARK: - Fetch Products
 extension ProductViewViewModel {
     
     @MainActor
-    func fetchProducts(page: Int = 1, limit: Int = 10) async {
+    func fetchProducts() async {
         isLoading = true
         
         defer {
@@ -32,12 +30,17 @@ extension ProductViewViewModel {
         }
         
         do {
+            // TODO: - Remove page and limit after implementing SwiftData
             let data: ProductsContainer = try await requestManager
-                .perform(ProductsRequest.getAllProducts(page: 1, limit: 10))
-            products = data.products
+                .perform(ProductsRequest.getAllProducts(
+                    page: 1,
+                    limit: 10)
+                )
+            products.append(contentsOf: data.products)
         } catch {
             errorMessage = error.localizedDescription
             print(error.localizedDescription)
         }
     }
+
 }

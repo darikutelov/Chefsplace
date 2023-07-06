@@ -14,6 +14,12 @@ struct ProductListCard: View {
         VStack {
             Text(product.name.uppercased())
         }
+        .frame(minHeight: 400)
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(Color.secondary.opacity(0.05))
+        )
     }
 }
 

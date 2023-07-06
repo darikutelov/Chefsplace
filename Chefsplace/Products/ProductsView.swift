@@ -12,7 +12,7 @@ struct ProductsView: View {
     
     var body: some View {
         VStack {
-            
+            ProductListView()
         }
     }
 }

@@ -23,6 +23,7 @@
 		9C5890622A39D9CB006384C3 /* ProductListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5890612A39D9CB006384C3 /* ProductListCard.swift */; };
 		9C5EACDA2A56E39700F7928A /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5EACD92A56E39700F7928A /* ProductListView.swift */; };
 		9C5EACDE2A56E55300F7928A /* ProductViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5EACDD2A56E55300F7928A /* ProductViewViewModel.swift */; };
+		9C5EACE22A57072900F7928A /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5EACE12A57072900F7928A /* CachedAsyncImage.swift */; };
 		9C6FC5C82A175365000C2BBC /* ChefsplaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */; };
 		9C6FC5CA2A175365000C2BBC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5C92A175365000C2BBC /* MainView.swift */; };
 		9C6FC5CC2A175367000C2BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6FC5CB2A175367000C2BBC /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 		9C5890612A39D9CB006384C3 /* ProductListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCard.swift; sourceTree = "<group>"; };
 		9C5EACD92A56E39700F7928A /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		9C5EACDD2A56E55300F7928A /* ProductViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewViewModel.swift; sourceTree = "<group>"; };
+		9C5EACE12A57072900F7928A /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		9C6FC5C42A175365000C2BBC /* Chefsplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chefsplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefsplaceApp.swift; sourceTree = "<group>"; };
 		9C6FC5C92A175365000C2BBC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				9C3278F22A24F44B0020A9F6 /* ButtonViews.swift */,
+				9C5EACE12A57072900F7928A /* CachedAsyncImage.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C5EACE22A57072900F7928A /* CachedAsyncImage.swift in Sources */,
 				9C6FC5CA2A175365000C2BBC /* MainView.swift in Sources */,
 				9CF573092A1CFE4F00E9D8C8 /* HomeView.swift in Sources */,
 				9C5EACDA2A56E39700F7928A /* ProductListView.swift in Sources */,

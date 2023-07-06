@@ -12,9 +12,11 @@ struct ProductListView: View {
     
     var body: some View {
         NavigationStack {
-            LazyVStack {
-                ForEach($viewModel.products) { product in
-                    ProductListCard(product: product)
+            ScrollView(showsIndicators: false){
+                LazyVStack {
+                    ForEach($viewModel.products) { product in
+                        ProductListCard(product: product)
+                    }
                 }
             }
         }

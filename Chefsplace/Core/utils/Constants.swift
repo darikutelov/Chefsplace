@@ -23,6 +23,8 @@ enum Constants {
     enum Api {
         // public static let host = "dry-chamber-19090.herokuapp.com"
         public static let host = "localhost"
+        public static let imagesBaseUrl = "https://res.cloudinary.com/dariku/image/upload/h_500,c_scale,q_auto:eco/v1650001742/chefsplace"
+        public static let productsPath = "/products/"
     }
     
     enum Colors {
