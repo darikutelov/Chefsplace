@@ -47,9 +47,9 @@ struct LoginView: View {
                             )
                             .autocapitalization(.none)
                             .autocorrectionDisabled()
-                            .onChange(of: viewModel.email, perform: { _ in
+                            .onChange(of: viewModel.email) { _, _ in
                                 isEmailPristine = false
-                            })
+                            }
                             .onSubmit {
                                 focusedField = .passwordField
                             }
@@ -71,9 +71,9 @@ struct LoginView: View {
                         .focused($focusedField, equals: .passwordField)
                         .autocapitalization(.none)
                         .autocorrectionDisabled()
-                        .onChange(of: viewModel.email, perform: { _ in
+                        .onChange(of: viewModel.email) { _, _ in
                             isPasswordPristine = false
-                        })
+                        }
                         .overlay(
                             RoundedRectangle(cornerRadius: Constants.Spacing.standard)
                                 .stroke(

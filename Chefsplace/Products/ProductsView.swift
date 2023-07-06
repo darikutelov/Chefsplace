@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ProductsView: View {
+   
+    
     var body: some View {
-        Text("Products")
-            .modifier(Heading())
+        VStack {
+            
+        }
     }
 }
 

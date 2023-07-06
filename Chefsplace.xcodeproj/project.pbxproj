@@ -20,6 +20,9 @@
 		9C3278F32A24F44B0020A9F6 /* ButtonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3278F22A24F44B0020A9F6 /* ButtonViews.swift */; };
 		9C34FDD62A24D4FF00C584DC /* lato.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C34FDD32A24CF2D00C584DC /* lato.ttf */; };
 		9C34FDD72A24D50300C584DC /* ptsans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C34FDD52A24D0D200C584DC /* ptsans.ttf */; };
+		9C5890622A39D9CB006384C3 /* ProductListCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5890612A39D9CB006384C3 /* ProductListCard.swift */; };
+		9C5EACDA2A56E39700F7928A /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5EACD92A56E39700F7928A /* ProductListView.swift */; };
+		9C5EACDE2A56E55300F7928A /* ProductViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5EACDD2A56E55300F7928A /* ProductViewViewModel.swift */; };
 		9C6FC5C82A175365000C2BBC /* ChefsplaceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */; };
 		9C6FC5CA2A175365000C2BBC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6FC5C92A175365000C2BBC /* MainView.swift */; };
 		9C6FC5CC2A175367000C2BBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6FC5CB2A175367000C2BBC /* Assets.xcassets */; };
@@ -70,6 +73,9 @@
 		9C34FDD32A24CF2D00C584DC /* lato.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = lato.ttf; sourceTree = "<group>"; };
 		9C34FDD42A24CF9C00C584DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9C34FDD52A24D0D200C584DC /* ptsans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ptsans.ttf; sourceTree = "<group>"; };
+		9C5890612A39D9CB006384C3 /* ProductListCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCard.swift; sourceTree = "<group>"; };
+		9C5EACD92A56E39700F7928A /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		9C5EACDD2A56E55300F7928A /* ProductViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewViewModel.swift; sourceTree = "<group>"; };
 		9C6FC5C42A175365000C2BBC /* Chefsplace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chefsplace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefsplaceApp.swift; sourceTree = "<group>"; };
 		9C6FC5C92A175365000C2BBC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -183,6 +189,48 @@
 			path = Modilfiers;
 			sourceTree = "<group>";
 		};
+		9C58905E2A39D6D7006384C3 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				9C5890612A39D9CB006384C3 /* ProductListCard.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		9C58905F2A39D6EB006384C3 /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				9C3278F22A24F44B0020A9F6 /* ButtonViews.swift */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		9C5890602A39D6FD006384C3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */,
+				9C6FC5C92A175365000C2BBC /* MainView.swift */,
+				9CF573122A1D000600E9D8C8 /* MainViewViewModel.swift */,
+				9CF573042A1CFD5300E9D8C8 /* TabNavigationView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9C5EACDB2A56E51900F7928A /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		9C5EACDC2A56E52800F7928A /* viewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9C5EACDD2A56E55300F7928A /* ProductViewViewModel.swift */,
+			);
+			path = viewModels;
+			sourceTree = "<group>";
+		};
 		9C6FC5BB2A175365000C2BBC = {
 			isa = PBXGroup;
 			children = (
@@ -275,7 +323,10 @@
 		9C6FC5DA2A175BD2000C2BBC /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				9C5EACDC2A56E52800F7928A /* viewModels */,
+				9C5EACDB2A56E51900F7928A /* views */,
 				9CF5730A2A1CFEAE00E9D8C8 /* ProductsView.swift */,
+				9C5EACD92A56E39700F7928A /* ProductListView.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -308,12 +359,10 @@
 		9C6FC5DE2A175C6E000C2BBC /* views */ = {
 			isa = PBXGroup;
 			children = (
-				9C6FC5C72A175365000C2BBC /* ChefsplaceApp.swift */,
-				9C6FC5C92A175365000C2BBC /* MainView.swift */,
-				9CF573122A1D000600E9D8C8 /* MainViewViewModel.swift */,
-				9CF573042A1CFD5300E9D8C8 /* TabNavigationView.swift */,
+				9C5890602A39D6FD006384C3 /* App */,
+				9C58905E2A39D6D7006384C3 /* Product */,
 				9C3278EB2A24E9E40020A9F6 /* Modilfiers */,
-				9C3278F22A24F44B0020A9F6 /* ButtonViews.swift */,
+				9C58905F2A39D6EB006384C3 /* UIElements */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -445,7 +494,6 @@
 				9C6FC5C02A175365000C2BBC /* Sources */,
 				9C6FC5C12A175365000C2BBC /* Frameworks */,
 				9C6FC5C22A175365000C2BBC /* Resources */,
-				9C21E8002A17A93F005A8E57 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -467,7 +515,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					9C6FC5C32A175365000C2BBC = {
 						CreatedOnToolsVersion = 14.3;
@@ -512,28 +560,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		9C21E8002A17A93F005A8E57 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		9C6FC5C02A175365000C2BBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -541,6 +567,7 @@
 			files = (
 				9C6FC5CA2A175365000C2BBC /* MainView.swift in Sources */,
 				9CF573092A1CFE4F00E9D8C8 /* HomeView.swift in Sources */,
+				9C5EACDA2A56E39700F7928A /* ProductListView.swift in Sources */,
 				9CF573132A1D000600E9D8C8 /* MainViewViewModel.swift in Sources */,
 				9C21E7FF2A17A760005A8E57 /* CategoriesRequest.swift in Sources */,
 				9CF573012A1CFC6700E9D8C8 /* RegisterViewViewModel.swift in Sources */,
@@ -554,8 +581,10 @@
 				9C3278F12A24EFCD0020A9F6 /* PasswordInputField.swift in Sources */,
 				9C21E7F12A17A4F7005A8E57 /* DataParser.swift in Sources */,
 				9CF572FE2A1CFC3300E9D8C8 /* LoginViewViewModel.swift in Sources */,
+				9C5890622A39D9CB006384C3 /* ProductListCard.swift in Sources */,
 				9CF572F32A1CEE3C00E9D8C8 /* Order.swift in Sources */,
 				9C6FC5C82A175365000C2BBC /* ChefsplaceApp.swift in Sources */,
+				9C5EACDE2A56E55300F7928A /* ProductViewViewModel.swift in Sources */,
 				9CF572FC2A1CFC1300E9D8C8 /* LoginView.swift in Sources */,
 				9CF573032A1CFC7E00E9D8C8 /* RegisterView.swift in Sources */,
 				9CF5730D2A1CFEED00E9D8C8 /* WishlistView.swift in Sources */,
@@ -600,6 +629,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -633,6 +663,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -647,7 +678,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -661,6 +692,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -694,6 +726,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -702,7 +735,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -730,6 +763,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -761,6 +795,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

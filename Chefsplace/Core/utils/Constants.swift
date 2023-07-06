@@ -73,7 +73,9 @@ enum Constants {
     
     enum Fonts {
         public static let headingFont = "PT Sans"
+        public static let headingFontBold = "PT Sans Bold"
         public static let bodyFont = "Lato"
+        public static let bodyFontBold = "Lato Bold"
     }
     
     enum ValidationRegex {
